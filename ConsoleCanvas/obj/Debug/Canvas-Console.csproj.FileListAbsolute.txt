@@ -1,0 +1,6 @@
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\bin\Debug\Canvas-Console.exe.config
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\bin\Debug\Canvas-Console.exe
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\bin\Debug\Canvas-Console.pdb
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\obj\Debug\Canvas-Console.csproj.CoreCompileInputs.cache
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\obj\Debug\Canvas-Console.exe
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\obj\Debug\Canvas-Console.pdb

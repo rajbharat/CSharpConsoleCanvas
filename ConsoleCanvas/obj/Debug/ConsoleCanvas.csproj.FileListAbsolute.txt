@@ -1,0 +1,13 @@
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\bin\Debug\ConsoleCanvas.exe.config
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\bin\Debug\ConsoleCanvas.exe
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\bin\Debug\ConsoleCanvas.pdb
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\obj\Debug\ConsoleCanvas.csproj.CoreCompileInputs.cache
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\obj\Debug\ConsoleCanvas.exe
+C:\Users\RajBharat\Source\Repos\Canvas-Console\Canvas-Console\obj\Debug\ConsoleCanvas.pdb
+C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\bin\Debug\ConsoleCanvas.exe.config
+C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\bin\Debug\ConsoleCanvas.exe
+C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\bin\Debug\ConsoleCanvas.pdb
+C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\obj\Debug\ConsoleCanvas.csprojAssemblyReference.cache
+C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\obj\Debug\ConsoleCanvas.csproj.CoreCompileInputs.cache
+C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\obj\Debug\ConsoleCanvas.exe
+C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\obj\Debug\ConsoleCanvas.pdb
