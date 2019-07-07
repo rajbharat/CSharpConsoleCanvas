@@ -14,7 +14,7 @@ namespace ConsoleCanvas.Validator
             if (this.ValidateLength(parameters))
             {
                 Console.WriteLine("Exit...");
-                return (0);
+                Environment.Exit (0);
             }
             return 0;
         }

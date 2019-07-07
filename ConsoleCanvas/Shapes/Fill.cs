@@ -17,12 +17,11 @@
             return output;
         }
 
-        /**
-         * BucketFill Method, Fill empty spaces to the edge of other shapes
-         * Recursive Function
-         * @param output byte[][]
-         * @param p Point
-         */
+        /// <summary>
+        ///   BucketFill Method, Fill empty spaces to the edge of other shapes Recursive Function
+        /// </summary>
+        /// <param name="output"></param>
+        /// <param name="p"></param>
         private void BucketFill(byte[,] output, Point p)
         {
             int currentColor = output[p.GetY(), p.GetX()];

@@ -11,3 +11,10 @@ C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\obj\Debug\ConsoleCa
 C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\obj\Debug\ConsoleCanvas.csproj.CoreCompileInputs.cache
 C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\obj\Debug\ConsoleCanvas.exe
 C:\Users\RajBharat\Source\Repos\Canvas-Console\ConsoleCanvas\obj\Debug\ConsoleCanvas.pdb
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\bin\Debug\ConsoleCanvas.exe.config
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\bin\Debug\ConsoleCanvas.exe
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\bin\Debug\ConsoleCanvas.pdb
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Debug\ConsoleCanvas.csprojAssemblyReference.cache
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Debug\ConsoleCanvas.csproj.CoreCompileInputs.cache
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Debug\ConsoleCanvas.exe
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Debug\ConsoleCanvas.pdb

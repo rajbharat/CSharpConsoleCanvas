@@ -35,6 +35,21 @@ namespace ConsoleCanvas.Validator
             }
             return true;
         }
+        public override bool Validate(String[] parameters)
+        {
+            int x1 = Int32.Parse(parameters[0]);
+            int y1 = Int32.Parse(parameters[1]);
+            int x2 = Int32.Parse(parameters[2]);
+            int y2 = Int32.Parse(parameters[3]);
+
+            if (!(x1 == x2 || y1 == y2))
+            {
+                Console.WriteLine("Only horizontal and vertical lines are allowed!");
+                return false;
+            }
+
+            return base.Validate(parameters);
+        }
     }
 
 }

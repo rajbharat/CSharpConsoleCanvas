@@ -65,4 +65,7 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)$(TargetName).exe" "$(SolutionDir)out\$(TargetName).exe"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

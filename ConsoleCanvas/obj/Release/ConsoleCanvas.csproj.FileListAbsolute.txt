@@ -1,0 +1,6 @@
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\bin\Release\ConsoleCanvas.exe.config
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\bin\Release\ConsoleCanvas.exe
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\bin\Release\ConsoleCanvas.pdb
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.csproj.CoreCompileInputs.cache
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.exe
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.pdb
