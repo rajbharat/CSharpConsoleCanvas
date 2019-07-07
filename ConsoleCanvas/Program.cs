@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace ConsoleCanvas
 {
-    class Program
+    public class Program
     {
         private static readonly String _availableCmd = "clrbq";
 
