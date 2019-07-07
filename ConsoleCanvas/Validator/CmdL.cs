@@ -46,6 +46,17 @@ namespace ConsoleCanvas.Validator
                 int x2 = Int32.Parse(parameters[2]);
                 int y2 = Int32.Parse(parameters[3]);
 
+                if (x2 < 0 || y2 < 0 || x1 < 0 || y1 < 0)
+                {
+                    Console.WriteLine("Negative arguments invalid ");
+                    return false;
+                }
+                if (this.canvas.GetWidth() < x1 || this.canvas.GetWidth() < x2 || this.canvas.GetHeight() < y1 || this.canvas.GetHeight() < y2)
+                {
+                    Console.WriteLine("Invalid Coordinates for Line");
+                    return false;
+                }
+
                 if (!(x1 == x2 || y1 == y2))
                 {
                     Console.WriteLine("Only horizontal and vertical lines are allowed!");

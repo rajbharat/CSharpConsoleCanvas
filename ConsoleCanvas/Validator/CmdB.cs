@@ -49,6 +49,40 @@ namespace ConsoleCanvas.Validator
             return true;
         }
 
+        public override bool Validate(String[] parameters)
+        {
+            // check if it's null to avoid NullPointerException
+            try
+            {
+                var basicValidation = base.Validate(parameters);
+
+                if (basicValidation)
+                {
+                    int x1 = Int32.Parse(parameters[0]);
+                    int y1 = Int32.Parse(parameters[1]);
+
+                    if (x1 < 0 || y1 < 0)
+                    {
+                        Console.WriteLine("Negative arguments invalid ");
+                        return false;
+                    }
+
+                    if (this.canvas.GetWidth() < x1 || this.canvas.GetHeight() < y1)
+                    {
+                        Console.WriteLine("Invalid Coordinates for Bucket Fill");
+                        return false;
+                    }
+
+                }
+                return basicValidation;
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e.StackTrace.ToString());
+                return false;
+            }
+        }
+
     }
 
 }

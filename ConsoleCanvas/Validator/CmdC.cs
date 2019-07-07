@@ -37,7 +37,19 @@ namespace ConsoleCanvas.Validator
             // check if it's null to avoid NullPointerException
             try
             {
-                return ValidateParams(parameters) && ValidateLength(parameters) && ValidateTypes(parameters);
+                var basicValidation = ValidateParams(parameters) && ValidateLength(parameters) && ValidateTypes(parameters);
+                if (basicValidation)
+                {
+                    int x1 = Int32.Parse(parameters[0]);
+                    int y1 = Int32.Parse(parameters[1]);
+
+                    if (x1 < 0 || y1 < 0)
+                    {
+                        Console.WriteLine("Negative arguments invalid ");
+                        return false;
+                    }
+                }
+                return basicValidation;
             }
             catch (NullReferenceException e)
             {

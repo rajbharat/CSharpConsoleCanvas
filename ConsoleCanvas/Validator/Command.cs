@@ -68,13 +68,14 @@ namespace ConsoleCanvas.Validator
             return true;
         }
 
-        protected static bool ValidateParams(String[] parameters)
+        protected bool ValidateParams(String[] parameters)
         {
             if (parameters == null)
             {
                 Console.WriteLine("Parameters are missing");
                 return false;
             }
+
             return true;
         }
 
