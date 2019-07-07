@@ -17,3 +17,4 @@ C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\bin\Debug\ConsoleCan
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Debug\ConsoleCanvas.csproj.CoreCompileInputs.cache
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Debug\ConsoleCanvas.exe
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Debug\ConsoleCanvas.pdb
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Debug\ConsoleCanvas.csprojAssemblyReference.cache
