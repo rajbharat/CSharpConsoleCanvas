@@ -1,4 +1,4 @@
-# console-drawing
+# consolecanvas
 A simple, fun program to draw on console.
 
 # overview
