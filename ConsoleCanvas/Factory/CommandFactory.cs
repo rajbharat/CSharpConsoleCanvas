@@ -1,38 +1,20 @@
 ﻿using ConsoleCanvas.Validator;
 using System;
+using System.Reflection;
 
 namespace ConsoleCanvas.Factory
 {
     public class CommandFactory
     {
-        public Command GetCommand(Char cmd)
+        public static Command GetCommand(Type command)
         {
-            if (cmd.Equals(' '))
-            {
-                return null;
-            }
+            return Activator.CreateInstance(command) as Command;
+        }
 
-            if (cmd.Equals('c'))
-            {
-                return new CmdC();
-            }
-            else if (cmd.Equals('l'))
-            {
-                return new CmdL();
-            }
-            else if (cmd.Equals('r'))
-            {
-                return new CmdR();
-            }
-            else if (cmd.Equals('b'))
-            {
-                return new CmdB();
-            }
-            else if (cmd.Equals('q'))
-            {
-                return new CmdQ();
-            }
-            return null;
+        public static Command GetCommand(string cmd)
+        {
+            Type type = Assembly.GetExecutingAssembly().GetType(cmd);
+            return Activator.CreateInstance(type) as Command;
         }
     }
 }

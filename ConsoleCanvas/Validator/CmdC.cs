@@ -16,8 +16,8 @@ namespace ConsoleCanvas.Validator
                 return -1;
             }
 
-            base.canvas = new Canvas(Int32.Parse(parameters[0]), Int32.Parse(parameters[1]));
-            canvas.PrintCanvas();
+            base.BaseCanvas = new Canvas(Int32.Parse(parameters[0]), Int32.Parse(parameters[1]));
+            BaseCanvas.PrintCanvas();
             return 0;
         }
 
@@ -25,12 +25,11 @@ namespace ConsoleCanvas.Validator
         {
             if (parameters.Length != Command.CREATE)
             {
-                Console.WriteLine("Wrong parameters to create the canvas, please check your command");
+                Console.WriteLine(Constants.WRONG_PARAMS_LENGTH);
                 return false;
             }
             return true;
         }
-
 
         public override bool Validate(String[] parameters)
         {
@@ -45,7 +44,7 @@ namespace ConsoleCanvas.Validator
 
                     if (x1 < 0 || y1 < 0)
                     {
-                        Console.WriteLine("Negative arguments invalid ");
+                        Console.WriteLine(Constants.NEGATIVE_ARGS);
                         return false;
                     }
                 }

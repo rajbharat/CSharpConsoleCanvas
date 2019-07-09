@@ -2,18 +2,18 @@
 {
     public class Fill : IShape
     {
-        private readonly Point _p;
-        private readonly byte _color;
+        private readonly Point Pt;
+        private readonly byte Color;
 
         public Fill(Point p, byte color)
         {
-            this._p = p;
-            this._color = color;
+            Pt = p;
+            Color = color;
         }
 
         public byte[,] Draw(byte[,] output)
         {
-            BucketFill(output, this._p);
+            BucketFill(output, this.Pt);
             return output;
         }
 
@@ -24,16 +24,15 @@
         /// <param name="p"></param>
         private void BucketFill(byte[,] output, Point p)
         {
-            int currentColor = output[p.GetY(), p.GetX()];
+            int currentColor = output[p.Y, p.X];
             if (currentColor == ' ')
             {
-                output[p.GetY(), p.GetX()] = this._color;
-                BucketFill(output, new Point(p.GetX() + 1, p.GetY()));
-                BucketFill(output, new Point(p.GetX() - 1, p.GetY()));
-                BucketFill(output, new Point(p.GetX(), p.GetY() + 1));
-                BucketFill(output, new Point(p.GetX() + 1, p.GetY() - 1));
+                output[p.Y, p.X] = this.Color;
+                BucketFill(output, new Point(p.X + 1, p.Y));
+                BucketFill(output, new Point(p.X - 1, p.Y));
+                BucketFill(output, new Point(p.X, p.Y + 1));
+                BucketFill(output, new Point(p.X + 1, p.Y - 1));
             }
         }
-
     }
 }

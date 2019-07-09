@@ -5,8 +5,6 @@ namespace ConsoleCanvas.Validator
 {
     public class CmdB : Command
     {
-
-
         public override String GetName()
         {
             return "b";
@@ -20,21 +18,20 @@ namespace ConsoleCanvas.Validator
             }
             Point p = new Point(Int32.Parse(parameters[0]), Int32.Parse(parameters[1]));
             IShape fill = new Fill(p, (byte)(parameters[2])[0]);
-            canvas.AddShape(fill);
-            canvas.PrintCanvas();
+            BaseCanvas.AddShape(fill);
+            BaseCanvas.PrintCanvas();
             return 0;
         }
-        //need to remove
+
         public override bool ValidateLength(String[] parameters)
         {
             if (parameters.Length != Command.FILL)
             {
-                Console.WriteLine("Wrong parameters to Fill canvas, please check your command");
+                Console.WriteLine(Constants.WRONG_PARAMS_LENGTH);
                 return false;
             }
             return true;
         }
-
 
         public override bool ValidateTypes(String[] parameters)
         {
@@ -42,7 +39,7 @@ namespace ConsoleCanvas.Validator
             {
                 if (!IsInteger(parameters[i]))
                 {
-                    Console.WriteLine("Parameter (" + parameters[i] + ") is not and integer");
+                    Console.WriteLine(Constants.NON_INTEGER_PARAM, parameters[i]);
                     return false;
                 }
             }
@@ -63,16 +60,15 @@ namespace ConsoleCanvas.Validator
 
                     if (x1 < 0 || y1 < 0)
                     {
-                        Console.WriteLine("Negative arguments invalid ");
+                        Console.WriteLine(Constants.NEGATIVE_ARGS);
                         return false;
                     }
 
-                    if (this.canvas.GetWidth() < x1 || this.canvas.GetHeight() < y1)
+                    if (this.BaseCanvas.Width < x1 || this.BaseCanvas.Height < y1)
                     {
-                        Console.WriteLine("Invalid Coordinates for Bucket Fill");
+                        Console.WriteLine(Constants.COORDINATES_OUTSIDE_CANVAS);
                         return false;
                     }
-
                 }
                 return basicValidation;
             }
@@ -84,5 +80,4 @@ namespace ConsoleCanvas.Validator
         }
 
     }
-
 }

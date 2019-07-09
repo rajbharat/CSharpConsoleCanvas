@@ -6,48 +6,24 @@ namespace ConsoleCanvas
 {
     public class Canvas
     {
+        public int Width { get; set; }
+        public int Height { get; set; }
 
-        private int _height;
-        private int _width;
         private readonly List<IShape> _shapes;
-
         // byte array instead of Character.
         private byte[,] canvasByteArray;
-        /**
-         * For the canvas borders, we add two columns and two rows
-         *
-         * @param width  int
-         * @param height int
-         */
+        /// <summary>
+        /// For the canvas borders, we add two columns and two rows
+        /// </summary>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
         public Canvas(int width, int height)
         {
-            this._height = height + 2; // why +2
-            this._width = width + 2; // for the borders
+            Height = height + 2; // why +2
+            Width = width + 2; // for the borders
             this._shapes = new List<IShape>();
-            this.canvasByteArray = new Byte[_height, _width];
+            this.canvasByteArray = new Byte[Height, Width];
         }
-
-        public int GetHeight()
-        {
-            return _height;
-        }
-
-        public void SetHeight(int height)
-        {
-            this._height = height;
-        }
-
-        public int GetWidth()
-        {
-            return _width;
-        }
-
-        public void SetWidth(int width)
-        {
-            this._width = width;
-        }
-
-
 
         public bool AddShape(IShape shapeInterface)
         {
@@ -55,9 +31,9 @@ namespace ConsoleCanvas
             return true;
         }
 
-        /**
-         * Method to render the canvas in the console
-         */
+        /// <summary>
+        /// Method to render the canvas in the console
+        /// </summary>
         public void PrintCanvas()
         {
 
@@ -88,9 +64,9 @@ namespace ConsoleCanvas
             }
 
             // print to console.
-            for (int i = 0; i < this._height; i++)
+            for (int i = 0; i < Height; i++)
             {
-                for (int j = 0; j < this._width; j++)
+                for (int j = 0; j < Width; j++)
                 {
                     Console.Write((char)canvasByteArray[i, j]);
                 }

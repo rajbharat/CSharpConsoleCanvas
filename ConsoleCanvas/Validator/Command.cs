@@ -9,17 +9,8 @@ namespace ConsoleCanvas.Validator
         protected static int LINE = 4;
         protected static int RECTANGLE = 4;
         protected static int FILL = 3;
-        protected Canvas canvas;
 
-        public Canvas GetCanvas()
-        {
-            return canvas;
-        }
-
-        public void SetCanvas(Canvas canvas)
-        {
-            this.canvas = canvas;
-        }
+        public Canvas BaseCanvas { get; set; }
 
         public abstract String GetName();
 
@@ -33,9 +24,9 @@ namespace ConsoleCanvas.Validator
             {
                 return false;
             }
-            if (this.canvas == null)
+            if (this.BaseCanvas == null)
             {
-                Console.WriteLine("You need to Create a Canvas first");
+                Console.WriteLine(Constants.MISSING_CANVAS);
                 return false;
             }
             return ValidateLength(parameters) && ValidateTypes(parameters);
@@ -47,7 +38,7 @@ namespace ConsoleCanvas.Validator
             {
                 if (!IsInteger(param))
                 {
-                    Console.WriteLine("Parameter (" + param + ") is not and integer");
+                    Console.WriteLine(Constants.NON_INTEGER_PARAM, param);
                     return false;
                 }
             }
@@ -72,12 +63,11 @@ namespace ConsoleCanvas.Validator
         {
             if (parameters == null)
             {
-                Console.WriteLine("Parameters are missing");
+                Console.WriteLine(Constants.MISSING_PARAMS);
                 return false;
             }
 
             return true;
         }
-
     }
 }

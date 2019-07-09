@@ -3,8 +3,8 @@
     public class Rectangle : IShape
     {
 
-        private Point _p1;
-        private Point _p2;
+        private readonly Point _p1;
+        private readonly Point _p2;
 
         public Rectangle(Point p1, Point p2) : base()
         {
@@ -14,11 +14,11 @@
 
         public byte[,] Draw(byte[,] output)
         {
-            for (int row = _p1.GetY(); row <= _p2.GetY(); row++)
+            for (int row = _p1.Y; row <= _p2.Y; row++)
             {
-                for (int col = _p1.GetX(); col <= _p2.GetX(); col++)
+                for (int col = _p1.X; col <= _p2.X; col++)
                 {
-                    if ((row == _p1.GetY() || row == _p2.GetY()) || (col == _p1.GetX() || col == _p2.GetX()))
+                    if ((row == _p1.Y || row == _p2.Y) || (col == _p1.X || col == _p2.X))
                     {
                         output[row, col] = (byte)'x';
                     }

@@ -5,7 +5,6 @@ namespace ConsoleCanvas.Validator
 {
     public class CmdL : Command
     {
-
         public override String GetName()
         {
             return "l";
@@ -21,8 +20,8 @@ namespace ConsoleCanvas.Validator
             Point p1 = new Point(Int32.Parse(parameters[0]), Int32.Parse(parameters[1]));
             Point p2 = new Point(Int32.Parse(parameters[2]), Int32.Parse(parameters[3]));
             IShape line = new Line(p1, p2);
-            canvas.AddShape(line);
-            canvas.PrintCanvas();
+            BaseCanvas.AddShape(line);
+            BaseCanvas.PrintCanvas();
             return 0;
         }
 
@@ -30,7 +29,7 @@ namespace ConsoleCanvas.Validator
         {
             if (parameters.Length != Command.LINE)
             {
-                Console.WriteLine("Wrong parameters to draw line, please check your command");
+                Console.WriteLine(Constants.WRONG_PARAMS_LENGTH);
                 return false;
             }
             return true;
@@ -48,25 +47,22 @@ namespace ConsoleCanvas.Validator
 
                 if (x2 < 0 || y2 < 0 || x1 < 0 || y1 < 0)
                 {
-                    Console.WriteLine("Negative arguments invalid ");
+                    Console.WriteLine(Constants.NEGATIVE_ARGS);
                     return false;
                 }
-                if (this.canvas.GetWidth() < x1 || this.canvas.GetWidth() < x2 || this.canvas.GetHeight() < y1 || this.canvas.GetHeight() < y2)
+                if (this.BaseCanvas.Width < x1 || this.BaseCanvas.Width < x2 || this.BaseCanvas.Height < y1 || this.BaseCanvas.Height < y2)
                 {
-                    Console.WriteLine("Invalid Coordinates for Line");
+                    Console.WriteLine(Constants.COORDINATES_OUTSIDE_CANVAS);
                     return false;
                 }
 
                 if (!(x1 == x2 || y1 == y2))
                 {
-                    Console.WriteLine("Only horizontal and vertical lines are allowed!");
+                    Console.WriteLine(Constants.WRONG_LINE_PARAMS);
                     return false;
                 }
-
             }
-
             return basicValidation;
         }
     }
-
 }

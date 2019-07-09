@@ -1,18 +1,23 @@
 ﻿using ConsoleCanvas.Factory;
 using ConsoleCanvas.Validator;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ConsoleCanvas
 {
     public class Program
     {
-        private static readonly String _availableCmd = "clrbq";
+        public static readonly Dictionary<char, Type> CmdDict = new Dictionary<char, Type>();
 
-        public static void Main(String[] args)
+        public static void Main()
         {
             Canvas canvas = null;
+            Command command;
+
+            BuildCommands();
             PrintMenu();
+
             while (true)
             {
                 Console.Write("$ ");
@@ -22,48 +27,20 @@ namespace ConsoleCanvas
                     String[] splitCmd = userInput.Split(' ');
                     Char cmd = splitCmd[0].ToLower()[0];
                     String[] parameters = splitCmd.Skip(1).ToArray();
-
-                    CommandFactory commandFactory = new CommandFactory();
-                    Command command;
                     // check if the command exists
-                    if (_availableCmd.IndexOf(cmd) > -1)
+                    if (CmdDict.TryGetValue(cmd, out Type cmdType))
                     {
-                        switch (cmd)
+                        command = CommandFactory.GetCommand(cmdType);
+                        if (canvas != null)
                         {
-                            case 'c':
-                                // command Create
-                                command = commandFactory.GetCommand(cmd);
-                                command.Execute(parameters);
-                                canvas = command.GetCanvas();
-                                break;
-                            case 'l':
-                                // command Line
-                                command = commandFactory.GetCommand(cmd);
-                                command.SetCanvas(canvas);
-                                command.Execute(parameters);
-                                break;
-                            case 'r':
-                                // command Rectangle
-                                command = commandFactory.GetCommand(cmd);
-                                command.SetCanvas(canvas);
-                                command.Execute(parameters);
-                                break;
-                            case 'b':
-                                // command bucket fill
-                                command = commandFactory.GetCommand(cmd);
-                                command.SetCanvas(canvas);
-                                command.Execute(parameters);
-                                break;
-                            case 'q':
-                                // command exit
-                                Command command4 = commandFactory.GetCommand(cmd);
-                                command4.Execute(parameters);
-                                break;
+                            command.BaseCanvas = canvas;
                         }
+                        command.Execute(parameters);
+                        canvas = command.BaseCanvas;
                     }
                     else
                     {
-                        Console.WriteLine("**********WRONG COMMAND TRY AGAIN ********");
+                        Console.WriteLine(Constants.WRONGSWITCH);
                     }
                 }
             }
@@ -77,7 +54,7 @@ namespace ConsoleCanvas
             Console.WriteLine("*                                        *");
             Console.WriteLine("*                  CMD                   *");
             Console.WriteLine("*                                        *");
-            Console.WriteLine("*   0) C w h          to create a convas *");
+            Console.WriteLine("*   0) C w h          to create a canvas *");
             Console.WriteLine("*   1) L x1 y1 x2 y2  to draw a line     *");
             Console.WriteLine("*   2) R x1 y1 x2 y2  to draw rectangle  *");
             Console.WriteLine("*   3) B x1 y1 color  to refill          *");
@@ -85,6 +62,15 @@ namespace ConsoleCanvas
             Console.WriteLine("******************************************");
             Console.WriteLine("*   3) Q              to Exit            *");
             Console.WriteLine("******************************************");
+        }
+
+        private static void BuildCommands()
+        {
+            CmdDict.Add('c', typeof(CmdC));
+            CmdDict.Add('l', typeof(CmdL));
+            CmdDict.Add('r', typeof(CmdR));
+            CmdDict.Add('b', typeof(CmdB));
+            CmdDict.Add('q', typeof(CmdQ));
         }
     }
 }

@@ -5,7 +5,6 @@ namespace ConsoleCanvas.Validator
 {
     public class CmdR : Command
     {
-
         public override String GetName()
         {
             return "r";
@@ -20,8 +19,8 @@ namespace ConsoleCanvas.Validator
             Point p3 = new Point(Int32.Parse(parameters[0]), Int32.Parse(parameters[1]));
             Point p4 = new Point(Int32.Parse(parameters[2]), Int32.Parse(parameters[3]));
             IShape rectangle = new Rectangle(p3, p4);
-            canvas.AddShape(rectangle);
-            canvas.PrintCanvas();
+            BaseCanvas.AddShape(rectangle);
+            BaseCanvas.PrintCanvas();
             return 0;
         }
 
@@ -29,7 +28,7 @@ namespace ConsoleCanvas.Validator
         {
             if (parameters.Length != Command.RECTANGLE)
             {
-                Console.WriteLine("Wrong parameters to draw rectangle, please check your command");
+                Console.WriteLine(Constants.WRONG_PARAMS_LENGTH);
                 return false;
             }
             return true;
@@ -37,7 +36,6 @@ namespace ConsoleCanvas.Validator
         public override bool Validate(String[] parameters)
         {
             var basicValidation = base.Validate(parameters);
-
             if (basicValidation)
             {
                 int x1 = Int32.Parse(parameters[0]);
@@ -47,17 +45,15 @@ namespace ConsoleCanvas.Validator
 
                 if (x2 < 0 || y2 < 0 || x1 < 0 || y1 < 0)
                 {
-                    Console.WriteLine("Negative arguments invalid ");
+                    Console.WriteLine(Constants.NEGATIVE_ARGS);
                     return false;
                 }
-                if ( this.canvas.GetWidth() < x1|| this.canvas.GetWidth() <x2 ||  this.canvas.GetHeight() <y1||  this.canvas.GetHeight()<y2)
+                if (this.BaseCanvas.Width < x1 || this.BaseCanvas.Width < x2 || this.BaseCanvas.Height < y1 || this.BaseCanvas.Height < y2)
                 {
-                    Console.WriteLine("Invalid Coordinates for Rectangle");
+                    Console.WriteLine(Constants.COORDINATES_OUTSIDE_CANVAS);
                     return false;
                 }
-
             }
-
             return basicValidation;
         }
     }

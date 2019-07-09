@@ -13,8 +13,8 @@ namespace ConsoleCanvas.Validator
         {
             if (this.ValidateLength(parameters))
             {
-                Console.WriteLine("Exit...");
-                Environment.Exit (0);
+                Console.WriteLine(Constants.EXIT);
+                Environment.Exit(0);
             }
             return 0;
         }
@@ -23,7 +23,7 @@ namespace ConsoleCanvas.Validator
         {
             if (parameters.Length != Command.QUIT)
             {
-                Console.WriteLine("Wrong parameters!");
+                Console.WriteLine(Constants.INCORRECT_PARAMS);
                 return false;
             }
             return true;

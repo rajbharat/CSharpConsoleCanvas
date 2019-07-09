@@ -72,3 +72,4 @@ $ B 10 3 0
 - When You create Canvas Multiple Times, Canvas is recreated as per new dimensions
 - Validated Negative params and out of bounds params
 - Color takes only numerical input - 1 char. if negative numbers are used , only - appears as filler
+- Max Size for Canvass to be Validated - Say 100. Fill Should Take only Positive Numbers 
