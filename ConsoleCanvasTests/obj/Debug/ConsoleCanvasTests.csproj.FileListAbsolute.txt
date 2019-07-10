@@ -1,5 +1,3 @@
-C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\obj\Debug\ConsoleCanvasTests.csprojAssemblyReference.cache
-C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\obj\Debug\ConsoleCanvasTests.csproj.CoreCompileInputs.cache
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -12,6 +10,8 @@ C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\bin\Debug\Conso
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\bin\Debug\ConsoleCanvas.exe.config
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\obj\Debug\ConsoleCanvasTests.csprojAssemblyReference.cache
+C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\obj\Debug\ConsoleCanvasTests.csproj.CoreCompileInputs.cache
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\obj\Debug\ConsoleCanvasTests.csproj.CopyComplete
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\obj\Debug\ConsoleCanvasTests.dll
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvasTests\obj\Debug\ConsoleCanvasTests.pdb

@@ -57,6 +57,7 @@ namespace ConsoleCanvas.Validator
                 {
                     int x1 = Int32.Parse(parameters[0]);
                     int y1 = Int32.Parse(parameters[1]);
+                    int z1 = Int32.Parse(parameters[2]);
 
                     if (x1 < 0 || y1 < 0)
                     {
@@ -67,6 +68,11 @@ namespace ConsoleCanvas.Validator
                     if (this.BaseCanvas.Width < x1 || this.BaseCanvas.Height < y1)
                     {
                         Console.WriteLine(Constants.COORDINATES_OUTSIDE_CANVAS);
+                        return false;
+                    }
+                    if (z1 < 0)
+                    {
+                        Console.WriteLine(Constants.NEGATIVE_ARGS);
                         return false;
                     }
                 }

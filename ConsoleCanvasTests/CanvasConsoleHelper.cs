@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleCanvasTests
+namespace ConsoleCanvas.Tests
 {
     class CanvasConsoleHelper
     {

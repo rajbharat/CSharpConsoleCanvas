@@ -37,6 +37,7 @@ namespace ConsoleCanvas.Validator
             try
             {
                 var basicValidation = ValidateParams(parameters) && ValidateLength(parameters) && ValidateTypes(parameters);
+
                 if (basicValidation)
                 {
                     int x1 = Int32.Parse(parameters[0]);
@@ -45,6 +46,11 @@ namespace ConsoleCanvas.Validator
                     if (x1 < 0 || y1 < 0)
                     {
                         Console.WriteLine(Constants.NEGATIVE_ARGS);
+                        return false;
+                    }
+                    if (x1 >Constants.MAX_CANVAS_SIZE || y1 > Constants.MAX_CANVAS_SIZE)
+                    {
+                        Console.WriteLine(Constants.MAX_CANVAS_SIZE_EXCEEDED);
                         return false;
                     }
                 }

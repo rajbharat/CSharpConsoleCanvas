@@ -13,6 +13,7 @@
         public const string WRONG_LINE_PARAMS = "Only Horizontal and Vertical lines are allowed!";
         public const string EXIT = "Exit...";
         public const string WRONGSWITCH = "**********WRONG COMMAND TRY AGAIN ********";
-        public const string MAX_CANVAS_SIZE_EXCEEDED = "**********WRONG COMMAND TRY AGAIN ********";
+        public const string MAX_CANVAS_SIZE_EXCEEDED = "Max Canvas Size is 100 * 100";
+        public const int MAX_CANVAS_SIZE =100;
     }
 }

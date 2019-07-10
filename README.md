@@ -68,8 +68,10 @@ $ B 10 3 0
     - Run program and tests from visual studio
 	
 	
-# commands
+# Restrictions & Assumptions
 - When You create Canvas Multiple Times, Canvas is recreated as per new dimensions
 - Validated Negative params and out of bounds params
-- Color takes only numerical input - 1 char. if negative numbers are used , only - appears as filler
+- Color takes only numerical input : 0-9
 - Max Size for Canvass to be Validated - Say 100. Fill Should Take only Positive Numbers 
+- If Canvas Size is defined as 20 x 20, Actual Size will be 22 x 22 ; 2 extra units are added for border.
+- So, while testing negative scenarios - use atleast 3 units more than the defined dimensions to check the validations

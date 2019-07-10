@@ -3,57 +3,186 @@ using ConsoleCanvas.Factory;
 using ConsoleCanvas.Validator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleCanvasTests
+namespace ConsoleCanvas.Tests
 {
-    class TestCommandR
+    [TestClass()]
+    public class TestCommandR
     {
         [TestMethod()]
-        public void TestCommandR1()
+        public void TestCommandR_Good()
         {
             Canvas canvas;
-  
-             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
-            Command cmdL = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r'));;
-
-            Assert.IsTrue(cmdC is CmdC);
-            Assert.IsTrue(cmdL is CmdR);
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
             String[] parametersC = { "20", "4" };
             String[] parametersR1 = { "16", "1", "20", "3" }; // correct parameters
-            String[] parametersR2 = { "16", "1", "20", "3", "2" };
-            String[] parametersR3 = { "16", "1", "20", "L" };
-            String[] parametersR4 = { "16", "1", "20" };
-
-            String[] parametersR5a = { "6", "3", "24", "3" }; // out of canvas boundary
-            String[] parametersR5b = { "6", "3", "12", "7" }; // out of canvas boundary
-            String[] parametersR5C = { "23", "3", "6", "4" }; // out of canvas boundary
-            String[] parametersR5D = { "6", "8", "12", "4" }; // out of canvas boundary
-            String[] parametersR6a = { "-6", "3", "6", "4" }; // negative coordinates
-            String[] parametersR6b = { "6", "-3", "6", "4" }; // negative coordinates
-            String[] parametersR6c = { "6", "3", "-6", "4" }; // negative coordinates
-            String[] parametersR6d = { "6", "3", "6", "-4" }; // negative coordinates
-
-            Assert.IsTrue(cmdL.Execute(parametersR1) == -1);
             cmdC.Execute(parametersC);
             canvas = cmdC.BaseCanvas;
-            cmdL.BaseCanvas = canvas;
-            Assert.IsTrue(cmdL.Execute(parametersR2) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR3) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR4) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR5a) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR5b) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR5C) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR5D) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR6a) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR6b) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR6c) == -1);
-            Assert.IsTrue(cmdL.Execute(parametersR6d) == -1);
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR1) == 0);
+        }
+        [TestMethod()]
+        public void TestCommandR_VerifyCmd()
+        {
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); 
+            Assert.IsTrue(cmdR is CmdR);           
+        }
+        [TestMethod()]
+        public void TestCommandR_ExtraParam()
+        {
+            Canvas canvas;
 
-            Assert.IsTrue(cmdL.Execute(parametersR1) == 0);
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR2 = { "16", "1", "20", "3", "2" };
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR2) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Invalid_Param()
+        {
+            Canvas canvas;
+
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR3 = { "16", "1", "20", "L" };
+ 
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR3) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Insufficient_Param()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR4 = { "16", "1", "20" };
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR4) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Rectangle_Before_Canvas()
+        {
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR1 = { "16", "1", "20", "3" }; // correct parameters
+            Assert.IsTrue(cmdR.Execute(parametersR1) == -1);
+        }
+
+        [TestMethod()]
+        public void TestCommandR_Point1_Outside_Boundary_X()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR5a = { "6", "3", "24", "3" }; // out of canvas boundary
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR5a) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Point1_Outside_Boundary_Y()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR5b = { "6", "3", "12", "7" }; // out of canvas boundary
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR5b) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Point2_Outside_Boundary_X()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR5C = { "23", "3", "6", "4" }; // out of canvas boundary
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR5C) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Point2_Outside_Boundary_Y()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR5D = { "6", "8", "12", "4" }; // out of canvas boundary
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR5D) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Point1_NegX()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR6a = { "-6", "3", "6", "4" }; // negative coordinates
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR6a) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Point1_NegY()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR6b = { "6", "-3", "6", "4" }; // negative coordinates
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR6b) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Point2_NegX()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR6c = { "6", "3", "-6", "4" }; // negative coordinates
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR6c) == -1);
+        }
+        [TestMethod()]
+        public void TestCommandR_Point2_NegY()
+        {
+            Canvas canvas;
+            Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
+            String[] parametersC = { "20", "4" };
+            String[] parametersR6d = { "6", "3", "6", "-4" }; // negative coordinates
+            cmdC.Execute(parametersC);
+            canvas = cmdC.BaseCanvas;
+            cmdR.BaseCanvas = canvas;
+            Assert.IsTrue(cmdR.Execute(parametersR6d) == -1);
         }
     }
 }
