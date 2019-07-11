@@ -65,7 +65,7 @@ namespace ConsoleCanvas.Validator
                         return false;
                     }
 
-                    if (this.BaseCanvas.Width < x1 || this.BaseCanvas.Height < y1)
+                    if (this.BaseCanvas.Width -2 < x1 || this.BaseCanvas.Height -2 < y1)
                     {
                         Console.WriteLine(Constants.COORDINATES_OUTSIDE_CANVAS);
                         return false;
@@ -73,6 +73,11 @@ namespace ConsoleCanvas.Validator
                     if (z1 < 0)
                     {
                         Console.WriteLine(Constants.NEGATIVE_ARGS);
+                        return false;
+                    }
+                    if (z1 > Constants.MAX_COLOR_SIZE)
+                    {
+                        Console.WriteLine(Constants.MAX_COLOR_EXCEEDED);
                         return false;
                     }
                 }

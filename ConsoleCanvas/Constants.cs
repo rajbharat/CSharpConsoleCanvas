@@ -14,6 +14,8 @@
         public const string EXIT = "Exit...";
         public const string WRONGSWITCH = "**********WRONG COMMAND TRY AGAIN ********";
         public const string MAX_CANVAS_SIZE_EXCEEDED = "Max Canvas Size is 100 * 100";
+        public const string MAX_COLOR_EXCEEDED = "Canvas should be between 0-9";
         public const int MAX_CANVAS_SIZE =100;
+        public const int MAX_COLOR_SIZE = 9;
     }
 }

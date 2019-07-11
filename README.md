@@ -70,8 +70,8 @@ $ B 10 3 0
 	
 # Restrictions & Assumptions
 - When You create Canvas Multiple Times, Canvas is recreated as per new dimensions
-- Validated Negative params and out of bounds params
+- Validated Negative params and out of bounds params (Based on Canvas Size) 
 - Color takes only numerical input : 0-9
 - Max Size for Canvass to be Validated - Say 100. Fill Should Take only Positive Numbers 
 - If Canvas Size is defined as 20 x 20, Actual Size will be 22 x 22 ; 2 extra units are added for border.
-- So, while testing negative scenarios - use atleast 3 units more than the defined dimensions to check the validations
+- Filled Area can be overwritten by Rectangle / Line but not by another Fill Color
