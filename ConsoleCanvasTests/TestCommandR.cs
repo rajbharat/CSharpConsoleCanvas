@@ -7,10 +7,10 @@ using System;
 namespace ConsoleCanvas.Tests
 {
     [TestClass()]
-    public class TestCommandR
+    public class Test_CmdR
     {
         [TestMethod()]
-        public void TestCommandR_Good()
+        public void Test_CmdR_Good()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -23,13 +23,13 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR1) == 0);
         }
         [TestMethod()]
-        public void TestCommandR_VerifyCmd()
+        public void Test_CmdR_VerifyCmd()
         {
             Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); 
             Assert.IsTrue(cmdR is CmdR);           
         }
         [TestMethod()]
-        public void TestCommandR_ExtraParam()
+        public void Test_CmdR_ExtraParam()
         {
             Canvas canvas;
 
@@ -43,7 +43,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR2) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Invalid_Param()
+        public void Test_CmdR_Invalid_Param()
         {
             Canvas canvas;
 
@@ -58,7 +58,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR3) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Insufficient_Param()
+        public void Test_CmdR_Insufficient_Param()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -71,7 +71,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR4) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Rectangle_Before_Canvas()
+        public void Test_CmdR_Rectangle_Before_Canvas()
         {
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
             Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
@@ -81,7 +81,7 @@ namespace ConsoleCanvas.Tests
         }
 
         [TestMethod()]
-        public void TestCommandR_Point1_Outside_Boundary_X()
+        public void Test_CmdR_Point1_Outside_Boundary_X()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -94,7 +94,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR5a) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Point1_Outside_Boundary_Y()
+        public void Test_CmdR_Point1_Outside_Boundary_Y()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -107,7 +107,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR5b) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Point2_Outside_Boundary_X()
+        public void Test_CmdR_Point2_Outside_Boundary_X()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -120,7 +120,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR5C) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Point2_Outside_Boundary_Y()
+        public void Test_CmdR_Point2_Outside_Boundary_Y()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -133,7 +133,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR5D) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Point1_NegX()
+        public void Test_CmdR_Point1_NegX()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -146,7 +146,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR6a) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Point1_NegY()
+        public void Test_CmdR_Point1_NegY()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -159,7 +159,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR6b) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Point2_NegX()
+        public void Test_CmdR_Point2_NegX()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -172,7 +172,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdR.Execute(parametersR6c) == -1);
         }
         [TestMethod()]
-        public void TestCommandR_Point2_NegY()
+        public void Test_CmdR_Point2_NegY()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));

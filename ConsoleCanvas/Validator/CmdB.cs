@@ -59,9 +59,9 @@ namespace ConsoleCanvas.Validator
                     int y1 = Int32.Parse(parameters[1]);
                     int z1 = Int32.Parse(parameters[2]);
 
-                    if (x1 < 0 || y1 < 0)
+                    if (x1 <= 0 || y1 <= 0)
                     {
-                        Console.WriteLine(Constants.NEGATIVE_ARGS);
+                        Console.WriteLine(Constants.NEGATIVE_NON_ZERO_ARGS);
                         return false;
                     }
 
@@ -72,7 +72,7 @@ namespace ConsoleCanvas.Validator
                     }
                     if (z1 < 0)
                     {
-                        Console.WriteLine(Constants.NEGATIVE_ARGS);
+                        Console.WriteLine(Constants.NEGATIVE_NON_ZERO_ARGS);
                         return false;
                     }
                     if (z1 > Constants.MAX_COLOR_SIZE)

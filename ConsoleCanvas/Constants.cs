@@ -4,7 +4,7 @@
     {
         //Validation for Commands
         public const string WRONG_PARAMS_LENGTH = "Incorrect number of arguments for this Switch";
-        public const string NEGATIVE_ARGS = "Negative arguments are invalid";
+        public const string NEGATIVE_NON_ZERO_ARGS = "Values should be a whole number greater than Zero";
         public const string INCORRECT_PARAMS = "Wrong parameters to Quit!";
         public const string MISSING_PARAMS = "Input Parameters are missing";
         public const string NON_INTEGER_PARAM = "Parameter {0} is not an integer";

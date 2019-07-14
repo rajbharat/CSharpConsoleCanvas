@@ -14,14 +14,14 @@ namespace ConsoleCanvas.Tests
     public class TestCommandB
     {
         [TestMethod()]
-        public void Test_Commands()
+        public void Test_CmdB()
         {
             Command cmdB = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('B'));
             Assert.IsTrue(cmdB is CmdB);
         }
 
         [TestMethod()]
-        public void Test_FillCmd_Fill_Before_Canvas()
+        public void Test_CmdB_Fill_Before_Canvas()
         {
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
             Command cmdB = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('B'));
@@ -32,7 +32,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdB.Execute(parametersB1) == -1);
         }
         [TestMethod()]
-        public void Test_FillCmd_Invalid_Height()
+        public void Test_CmdB_Invalid_Height()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -46,7 +46,7 @@ namespace ConsoleCanvas.Tests
         }
 
         [TestMethod()]
-        public void Test_FillCmd_ExtraParam()
+        public void Test_CmdB_ExtraParam()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -59,7 +59,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdB.Execute(parametersB2) == -1);
         }
         [TestMethod()]
-        public void Test_FillCmd_NoColorParam()
+        public void Test_CmdB_NoColorParam()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -72,7 +72,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdB.Execute(parametersB4) == -1);
         }
         [TestMethod()]
-        public void Test_FillCmd_Width_Outside_Canvas()
+        public void Test_CmdB_Width_Outside_Canvas()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -85,7 +85,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdB.Execute(parametersB5a) == -1);
         }
         [TestMethod()]
-        public void Test_FillCmd_Height_Outside_Canvas()
+        public void Test_CmdB_Height_Outside_Canvas()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -98,7 +98,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdB.Execute(parametersB5b) == -1);
         }
         [TestMethod()]
-        public void Test_FillCmd_Negative_Width()
+        public void Test_CmdB_Negative_Width()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -111,7 +111,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdB.Execute(parametersB6a) == -1);
         }
         [TestMethod()]
-        public void Test_FillCmd_Negative_Height()
+        public void Test_CmdB_Negative_Height()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -125,7 +125,7 @@ namespace ConsoleCanvas.Tests
         }
 
         [TestMethod()]
-        public void Test_FillCmd_Negative_Color()
+        public void Test_CmdB_Negative_Color()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -138,7 +138,7 @@ namespace ConsoleCanvas.Tests
             Assert.IsTrue(cmdB.Execute(parametersB2) == -1);
         }
         [TestMethod()]
-        public void Test_FillCmd_Ok()
+        public void Test_CmdB_Ok()
         {
             Canvas canvas;
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));

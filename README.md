@@ -74,4 +74,4 @@ $ B 10 3 0
 - Color takes only numerical input : 0-9
 - Max Size for Canvass to be Validated - Say 100. Fill Should Take only Positive Numbers 
 - If Canvas Size is defined as 20 x 20, Actual Size will be 22 x 22 ; 2 extra units are added for border.
-- Filled Area can be overwritten by Rectangle / Line but not by another Fill Color
+- Filled Area can be overwritten by Rectangle / Line but not by another Fill Color character

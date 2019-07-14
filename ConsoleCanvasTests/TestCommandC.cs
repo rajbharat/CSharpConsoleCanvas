@@ -10,17 +10,17 @@ using System.Threading.Tasks;
 namespace ConsoleCanvas.Tests
 {
     [TestClass()]
-    public class TestCommandC
+    public class Test_CmdC
     {
         [TestMethod()]
-        public void TestCommandC_Verify_Cmd()
+        public void Test_CmdC_Verify_Cmd()
         {
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
             Assert.IsTrue(cmd is CmdC);
         }
 
         [TestMethod()]
-        public void TestCommandC_Good()
+        public void Test_CmdC_Good()
         {
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
             String[] parameters1 = { "10", "5" };
@@ -28,7 +28,7 @@ namespace ConsoleCanvas.Tests
         }
 
         [TestMethod()]
-        public void TestCommandC_NullParam()
+        public void Test_CmdC_NullParam()
         {
 
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -36,7 +36,7 @@ namespace ConsoleCanvas.Tests
 
         }
         [TestMethod()]
-        public void TestCommandC_ExtraParam()
+        public void Test_CmdC_ExtraParam()
         {
   
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -45,7 +45,7 @@ namespace ConsoleCanvas.Tests
         }
 
         [TestMethod()]
-        public void TestCommandC_Invalid_Height()
+        public void Test_CmdC_Invalid_Height()
         {
 
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -54,7 +54,7 @@ namespace ConsoleCanvas.Tests
         }
 
         [TestMethod()]
-        public void TestCommandC_Negative_Height()
+        public void Test_CmdC_Negative_Height()
         {
 
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
@@ -63,14 +63,14 @@ namespace ConsoleCanvas.Tests
         }
 
         [TestMethod()]
-        public void TestCommandC_Negative_Width()
+        public void Test_CmdC_Negative_Width()
         {
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
             String[] parameters4B = { "10", "-5" }; //negative
             Assert.IsTrue(cmd.Execute(parameters4B) == -1);
         }
         [TestMethod()]
-        public void TestCommandC_Max_Canvas_Size_Exceeded()
+        public void Test_CmdC_Max_Canvas_Size_Exceeded()
         {
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
             String[] parameters1 = { "110", "5" };

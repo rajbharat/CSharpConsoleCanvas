@@ -43,9 +43,9 @@ namespace ConsoleCanvas.Validator
                     int x1 = Int32.Parse(parameters[0]);
                     int y1 = Int32.Parse(parameters[1]);
 
-                    if (x1 < 0 || y1 < 0)
+                    if (x1 <= 0 || y1 <= 0)
                     {
-                        Console.WriteLine(Constants.NEGATIVE_ARGS);
+                        Console.WriteLine(Constants.NEGATIVE_NON_ZERO_ARGS);
                         return false;
                     }
                     if (x1 >Constants.MAX_CANVAS_SIZE || y1 > Constants.MAX_CANVAS_SIZE)
