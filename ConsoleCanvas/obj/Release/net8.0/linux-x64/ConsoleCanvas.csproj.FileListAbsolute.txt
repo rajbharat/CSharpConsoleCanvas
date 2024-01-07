@@ -1,0 +1,13 @@
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\bin\Release\net8.0\linux-x64\ConsoleCanvas
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\bin\Release\net8.0\linux-x64\ConsoleCanvas.deps.json
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\bin\Release\net8.0\linux-x64\ConsoleCanvas.runtimeconfig.json
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\bin\Release\net8.0\linux-x64\ConsoleCanvas.dll
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\bin\Release\net8.0\linux-x64\ConsoleCanvas.pdb
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\ConsoleCanvas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\ConsoleCanvas.csproj.CoreCompileInputs.cache
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\ConsoleCanvas.sourcelink.json
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\ConsoleCanvas.dll
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\refint\ConsoleCanvas.dll
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\ConsoleCanvas.pdb
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\ConsoleCanvas.genruntimeconfig.cache
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\ref\ConsoleCanvas.dll

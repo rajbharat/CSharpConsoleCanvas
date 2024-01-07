@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "WIIYU6MPPVzUPtcchIZ0pmZCsv7CyGFgAE3LQdwtiaLrTOy1m//3ieUQ8p+pVw1TBBNIaTUpmbj+zTKoDZblOA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\RAJBH\\Documents\\Git\\CSharpConsoleCanvas\\CSharpConsoleCanvas\\ConsoleCanvas\\ConsoleCanvas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RAJBH\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\RAJBH\\.nuget\\packages\\microsoft.dotnet.upgradeassistant.extensions.default.analyzers\\0.4.421302\\microsoft.dotnet.upgradeassistant.extensions.default.analyzers.0.4.421302.nupkg.sha512",
+    "C:\\Users\\RAJBH\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
+    "C:\\Users\\RAJBH\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\RAJBH\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\8.0.0\\microsoft.netcore.app.host.linux-x64.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,5 @@
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Docker\publish\ConsoleCanvas.exe
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Docker\publish\ConsoleCanvas.dll
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Docker\publish\ConsoleCanvas.deps.json
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Docker\publish\ConsoleCanvas.runtimeconfig.json
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Docker\publish\ConsoleCanvas.pdb

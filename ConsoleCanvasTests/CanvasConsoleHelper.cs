@@ -1,11 +1,6 @@
-﻿using ConsoleCanvas;
-using ConsoleCanvas.Factory;
-using ConsoleCanvas.Validator;
+﻿using ConsoleCanvas.Validator;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleCanvas.Tests
 {

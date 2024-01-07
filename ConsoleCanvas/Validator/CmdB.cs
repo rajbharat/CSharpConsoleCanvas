@@ -65,7 +65,7 @@ namespace ConsoleCanvas.Validator
                         return false;
                     }
 
-                    if (this.BaseCanvas.Width -2 < x1 || this.BaseCanvas.Height -2 < y1)
+                    if (this.BaseCanvas.Width - 2 < x1 || this.BaseCanvas.Height - 2 < y1)
                     {
                         Console.WriteLine(Constants.COORDINATES_OUTSIDE_CANVAS);
                         return false;

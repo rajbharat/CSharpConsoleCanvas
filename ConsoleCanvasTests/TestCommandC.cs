@@ -2,10 +2,6 @@
 using ConsoleCanvas.Validator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleCanvas.Tests
 {
@@ -38,7 +34,7 @@ namespace ConsoleCanvas.Tests
         [TestMethod()]
         public void Test_CmdC_ExtraParam()
         {
-  
+
             Command cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
             String[] parameters2 = { "10", "5", "4" };
             Assert.IsTrue(cmd.Execute(parameters2) == -1);

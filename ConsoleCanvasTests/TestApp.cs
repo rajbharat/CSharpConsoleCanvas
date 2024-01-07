@@ -1,6 +1,5 @@
 ﻿using ConsoleCanvas.Factory;
 using ConsoleCanvas.Validator;
-using ConsoleCanvas.Tests;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -9,7 +8,7 @@ namespace ConsoleCanvas.Tests
     [TestClass()]
     public class TestApp
     {
-        
+
         [TestMethod()]
         public void DrawAllShapes()
         {
@@ -33,20 +32,20 @@ namespace ConsoleCanvas.Tests
             // line
             cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('L'));
             Assert.IsTrue(cmd is CmdL);
-            cmd.BaseCanvas=canvas;
+            cmd.BaseCanvas = canvas;
             Assert.IsTrue(cmd.Execute(parametersL1) == 0);
             Assert.IsTrue(cmd.Execute(parametersL2) == 0);
 
             // rectangle
             cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('R'));
             Assert.IsTrue(cmd is CmdR);
-            cmd.BaseCanvas=canvas;
+            cmd.BaseCanvas = canvas;
             Assert.IsTrue(cmd.Execute(parametersR) == 0);
 
             // bucket fill
             cmd = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('B'));
             Assert.IsTrue(cmd is CmdB);
-            cmd.BaseCanvas=canvas;
+            cmd.BaseCanvas = canvas;
             Assert.IsTrue(cmd.Execute(parametersB) == 0);
         }
 

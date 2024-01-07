@@ -1,12 +1,7 @@
-﻿using ConsoleCanvas;
-using ConsoleCanvas.Factory;
+﻿using ConsoleCanvas.Factory;
 using ConsoleCanvas.Validator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleCanvas.Tests
 {
@@ -131,7 +126,7 @@ namespace ConsoleCanvas.Tests
             Command cmdC = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('c'));
             Command cmdB = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('B'));
             String[] parametersC = { "20", "4" };
-            String[] parametersB2 = { "10", "3", "-1"};
+            String[] parametersB2 = { "10", "3", "-1" };
             cmdC.Execute(parametersC);
             canvas = cmdC.BaseCanvas;
             cmdB.BaseCanvas = canvas;

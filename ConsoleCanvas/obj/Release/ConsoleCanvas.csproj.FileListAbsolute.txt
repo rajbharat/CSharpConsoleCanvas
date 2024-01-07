@@ -5,3 +5,10 @@ C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleC
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.exe
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.pdb
 C:\Users\RajBharat\Source\Repos\ConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.csprojAssemblyReference.cache
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\ConsoleCanvas\bin\Release\ConsoleCanvas.exe.config
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\ConsoleCanvas\bin\Release\ConsoleCanvas.exe
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\ConsoleCanvas\bin\Release\ConsoleCanvas.pdb
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.csproj.AssemblyReference.cache
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.csproj.CoreCompileInputs.cache
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.exe
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\ConsoleCanvas.pdb

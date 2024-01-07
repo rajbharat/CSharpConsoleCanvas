@@ -1,0 +1,5 @@
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\PubTmp\Out\ConsoleCanvas
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\PubTmp\Out\ConsoleCanvas.dll
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\PubTmp\Out\ConsoleCanvas.deps.json
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\PubTmp\Out\ConsoleCanvas.runtimeconfig.json
+C:\Users\RAJBH\Documents\Git\CSharpConsoleCanvas\CSharpConsoleCanvas\ConsoleCanvas\obj\Release\net8.0\linux-x64\PubTmp\Out\ConsoleCanvas.pdb

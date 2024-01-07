@@ -1,5 +1,4 @@
-﻿using ConsoleCanvas;
-using ConsoleCanvas.Factory;
+﻿using ConsoleCanvas.Factory;
 using ConsoleCanvas.Validator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -25,8 +24,8 @@ namespace ConsoleCanvas.Tests
         [TestMethod()]
         public void Test_CmdR_VerifyCmd()
         {
-            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); 
-            Assert.IsTrue(cmdR is CmdR);           
+            Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r'));
+            Assert.IsTrue(cmdR is CmdR);
         }
         [TestMethod()]
         public void Test_CmdR_ExtraParam()
@@ -51,7 +50,7 @@ namespace ConsoleCanvas.Tests
             Command cmdR = CommandFactory.GetCommand(CanvasConsoleHelper.GetCommand('r')); ;
             String[] parametersC = { "20", "4" };
             String[] parametersR3 = { "16", "1", "20", "L" };
- 
+
             cmdC.Execute(parametersC);
             canvas = cmdC.BaseCanvas;
             cmdR.BaseCanvas = canvas;

@@ -1,5 +1,4 @@
-﻿using ConsoleCanvas;
-using ConsoleCanvas.Factory;
+﻿using ConsoleCanvas.Factory;
 using ConsoleCanvas.Validator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;

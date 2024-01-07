@@ -48,7 +48,7 @@ namespace ConsoleCanvas.Validator
                         Console.WriteLine(Constants.NEGATIVE_NON_ZERO_ARGS);
                         return false;
                     }
-                    if (x1 >Constants.MAX_CANVAS_SIZE || y1 > Constants.MAX_CANVAS_SIZE)
+                    if (x1 > Constants.MAX_CANVAS_SIZE || y1 > Constants.MAX_CANVAS_SIZE)
                     {
                         Console.WriteLine(Constants.MAX_CANVAS_SIZE_EXCEEDED);
                         return false;
